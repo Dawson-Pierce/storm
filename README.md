@@ -1,10 +1,12 @@
 ### STORM Tracking Algorithms  
 
-First, build the image with the plotting argument enabled:
+# Build
+
+For plotting, ensure the argument is ON:
 
 ```docker build --build-arg STORM_ENABLE_PLOTTING=ON -t storm-dev .\.devcontainer\```
 
-Next, run the docker file with the .x11 mounted so it can be found:
+# Run
 ```
 docker run --rm -it \
     -v "${PWD}:/workspace" \
@@ -13,8 +15,13 @@ docker run --rm -it \
     storm-dev
 ```
 
-To test:
+# Test Plotting:
 ```
 gnuplot
 plot sin(x)
 ```
+
+# Troubleshooting:
+If a plot did not appear and you're running WSL, 
+- make sure you're using the WSL terminal
+- make sure your WSL can access docker (go Docker > Settings > Resources > WSL integration)
