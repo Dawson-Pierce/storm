@@ -18,9 +18,12 @@ docker run --rm -it \
 ```
 
 # Test Plotting:
-A simple command line test starts gnuplot
+A simple command line test starts gnuplot through
+
 ```gnuplot```
+
 and then plots a simple sine wave
+
 ```plot sin(x)```
 
 # Troubleshooting:
