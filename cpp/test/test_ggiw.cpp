@@ -1,4 +1,4 @@
-#include <storm/models/GGIW.hpp>
+#include <storm/models/GGIW2D.hpp>
 #include <storm/plotting/ggiw_plot.hpp>
 
 #include <cmath>
@@ -22,7 +22,7 @@ int main() {
     extent << 9.0, 1.0,
               1.0, 4.0;
 
-    storm::GGIW distribution(
+    storm::GGIW2D distribution(
         6.0,
         2.0,
         mean,
@@ -31,7 +31,9 @@ int main() {
         extent
     );
 
-    auto figure = storm::plot(distribution);
+    auto figure = matplot::figure(true);
+    auto axes = figure->current_axes();
+    storm::plot(axes, distribution);
     figure->show();
 
     const bool passed =
@@ -43,10 +45,10 @@ int main() {
         distribution.IWshape().isApprox(extent);
 
     if (!passed) {
-        std::cerr << "GGIW construction/accessor test failed\n";
+        std::cerr << "GGIW2D construction/accessor test failed\n";
         return 1;
     }
 
-    std::cout << "GGIW construction/accessor test passed\n";
+    std::cout << "GGIW2D construction/accessor test passed\n";
     return 0;
 }

@@ -1,7 +1,7 @@
-#include <storm/models/GGIW.hpp>
+#include <storm/models/GGIW2D.hpp>
 
 namespace storm {
-    GGIW::GGIW(
+    GGIW2D::GGIW2D(
         double a, 
         double b, 
         const Vector& mean, 
@@ -19,22 +19,22 @@ namespace storm {
 
         }
 
-    double GGIW::alpha() const{
+    double GGIW2D::alpha() const{
         return a_;
     }
-    double GGIW::beta() const{
+    double GGIW2D::beta() const{
         return b_;
     }
-    const Vector& GGIW::mean() const{
+    const Vector& GGIW2D::mean() const{
         return m_;
     }
-    const Matrix& GGIW::covariance() const{
+    const Matrix& GGIW2D::covariance() const{
         return P_;
     }
-    double GGIW::IWdof() const{
+    double GGIW2D::IWdof() const{
         return v_;
     }
-    const Matrix& GGIW::IWshape() const{
+    const Matrix& GGIW2D::IWshape() const{
         return V_;
     } 
 

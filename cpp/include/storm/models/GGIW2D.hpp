@@ -4,10 +4,10 @@
 #include <string>
 
 namespace storm {
-    class GGIW
+    class GGIW2D
     {
         public:
-            GGIW(
+            GGIW2D(
                 double a, 
                 double b, 
                 const Vector& mean, 

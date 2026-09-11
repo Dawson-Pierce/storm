@@ -1,7 +1,7 @@
 add_library(
     storm_models
     STATIC
-        GGIW.cpp
+        GGIW2D.cpp
 )
 
 add_library(STORM::models ALIAS storm_models)
