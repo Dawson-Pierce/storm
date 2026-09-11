@@ -16,11 +16,6 @@
 				"lextudio.restructuredtext",
 				"trond-snekvik.simple-rst"
 			],
-
-			"containerUser": "user",
-			"containerEnv": {
-			"LOCAL_USER_ID": "${localEnv:UID}"
-			},
 			"settings": {
 				"terminal.integrated.shell.linux": "/bin/bash"
 			}

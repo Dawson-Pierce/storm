@@ -9,7 +9,7 @@ project(
 )
 
 # So we don't fry our hardware with plotting software... 
-option(CPP_ENABLE_PLOTTING "Enable desktop plotting support" OFF)
+option(CPP_ENABLE_PLOTTING "Enable desktop plotting support" ON)
 option(STORM_BUILD_TESTS "Build the STORM test scripts" ON)
 
 # IDK what this does exactly
@@ -26,6 +26,7 @@ set(FETCHCONTENT_BASE_DIR "${CMAKE_SOURCE_DIR}/dependencies" CACHE PATH
 
 
 ################################ EIGEN ################################
+# Note: This doesn't work anymore, but the docker installs Eigen
 find_package(Eigen3 3.4 QUIET NO_MODULE)
 if(NOT Eigen3_FOUND)
     message(STATUS "Eigen3 not found locally, fetching from GitLab...")

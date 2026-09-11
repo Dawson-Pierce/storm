@@ -1,7 +1,7 @@
 add_library(
     storm_plot
     STATIC
-        plot_GGIW.cpp
+        ggiw_plot.cpp
 )
 
 add_library(STORM::plotting ALIAS storm_plot)
@@ -16,4 +16,6 @@ target_link_libraries(
     storm_plot
     PUBLIC
         Eigen3::Eigen
+        STORM::models
+        Matplot++::matplot
 )

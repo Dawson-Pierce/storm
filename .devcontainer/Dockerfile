@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     cmake \
     ninja-build \
+    libeigen3-dev \
     git \
     ca-certificates \
     gdb \
@@ -38,6 +39,9 @@ ENV PATH="/opt/venv/bin:${PATH}"
 RUN pip install numpy matplotlib bsk
 
 
+
+ENV HOME="/home/ubuntu"
+USER ubuntu
 
 WORKDIR /workspace
 
