@@ -1,4 +1,4 @@
-### STORM Tracking Algorithms  
+# STORM Tracking Algorithms  
 
 This repo follows the tracking of storms from satellites using lightning flash detections. 
 
@@ -6,13 +6,13 @@ It is constructed using Docker, which imports necessary C++ libraries for compil
 
 ## Docker
 
-# Build
+### Build
 
 To build the docker image, enter in a terminal:
 
 ```docker build --build-arg CPP_ENABLE_PLOTTING=ON -t storm-dev .\.devcontainer\```
 
-# Run
+### Run
 
 Then, to run the image while mounting the display, run:
 
@@ -24,7 +24,7 @@ docker run --rm -it \
     storm-dev
 ```
 
-# Test Plotting:
+### Test Plotting:
 Gnuplot can be started from the command line:
 
 ```gnuplot```
@@ -33,14 +33,14 @@ And then a simple sine wave can be plotted to ensure the docker is connected to 
 
 ```plot sin(x)```
 
-# Troubleshooting:
+### Troubleshooting:
 If a plot did not appear and you're running WSL, 
 - make sure you're using the WSL terminal
 - make sure your WSL can access docker (go Docker > Settings > Resources > WSL integration)
 
 ## CMAKE Build
 
-# Build
+### Build
 
 For building, ensure you are in the correct directory after running the docker image:
 
@@ -50,13 +50,13 @@ Then, build the project using Ninja:
 
 ```cmake -S . -B build -G Ninja```
 
-# Compile
+### Compile
 
 Compile the project:
 
 ```cmake --build build```
 
-# Run Test Script
+### Run Test Script
 
 Run the test script:
 
