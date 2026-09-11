@@ -4,7 +4,7 @@
 
 For plotting, ensure the argument is ON:
 
-```docker build --build-arg STORM_ENABLE_PLOTTING=ON -t storm-dev .\.devcontainer\```
+```docker build --build-arg CPP_ENABLE_PLOTTING=ON -t storm-dev .\.devcontainer\```
 
 # Run
 

@@ -9,7 +9,7 @@ project(
 )
 
 # So we don't fry our hardware with plotting software... 
-option(STORM_ENABLE_PLOTTING "Enable desktop plotting support" OFF)
+option(CPP_ENABLE_PLOTTING "Enable desktop plotting support" OFF)
 option(STORM_BUILD_TESTS "Build the STORM test scripts" ON)
 
 # IDK what this does exactly
@@ -44,7 +44,7 @@ endif()
 
 
 ############################### PLOTTING ###############################
-if(STORM_ENABLE_PLOTTING)
+if(CPP_ENABLE_PLOTTING)
     find_package(Matplot++ QUIET CONFIG)
 
     if(NOT TARGET Matplot++::matplot)
@@ -78,7 +78,7 @@ add_subdirectory(src/storm/filters)
 add_subdirectory(src/storm/models)
 add_subdirectory(src/storm/rfs)
 
-if(STORM_ENABLE_PLOTTING)
+if(CPP_ENABLE_PLOTTING)
     add_subdirectory(src/storm/plotting)
 endif()
 
